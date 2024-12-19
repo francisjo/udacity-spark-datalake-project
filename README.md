@@ -23,7 +23,7 @@ Building a **data engineering solution** to **extract data** from the STEDI Step
 
 ```
 UDACITY-SPARK-DATALAKE-PROJECT
-├── jobs_scripts                     # Spark Jobs Python Scripts 
+├── job_scripts                     # Spark Jobs Python Scripts 
 │   └── ...
 ├── screenshots                      # Screenshots of AWS Athena and Glue Studio 
 │   └── job_results_athena
