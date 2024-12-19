@@ -120,11 +120,11 @@ On **AWS Athena**, I performed a **full table scan** on three tables to analyze 
 
 A Spark job is used to transform customer data from the LANDING zone to the TRUSTED zone. 
 
-I utilized **Glue Studio** to create ETL jobs for extracting, transforming, and loading data from S3. The **Visual ETL** tool in Glue Studio made it easy to design the job visually. The generated _PySpark_ code is saved in the [`./job_scripts` folder](./jobs_scripts/).
+I utilized **Glue Studio** to create ETL jobs for extracting, transforming, and loading data from S3. The **Visual ETL** tool in Glue Studio made it easy to design the job visually. The generated _PySpark_ code is saved in the [`./job_scripts` folder](./job_scripts/).
 
 ### 7.1 **Glue Job Scripts**
 
-1. **[`customer_landing_to_trusted.py`](./job_scripts/customer_landing_to_trusted.py)**:  
+1. **[`customer_landing_to_trusted.py`](./job_scripts/Customer_Landing_To_Trusted.py)**:  
 Transfers customer data from the "Landing" to the "Trusted" zone and filters customers who have agreed to share their data with researchers.
 
 
@@ -135,7 +135,7 @@ Transfers customer data from the "Landing" to the "Trusted" zone and filters cus
    - Removes fields from `customer_trusted`.  
    - Eliminates duplicate rows.
 
-3. **[`step_trainer_landing_to_trusted.py`](./job_scripts/step_trainer_Landing_To_Trusted.py)**:  
+3. **[`step_trainer_landing_to_trusted.py`](./job_scripts/Step_Trainer_Landing_To_Trusted.py)**:  
 Transfers Step Trainer data from the "Landing" to the "Trusted" zone.  
 - Joins `customer_curated` with `step_trainer_landing` on `serialnumber`.  
 - Filters readings to exclude records where `serialnumber1` is null or empty.  
