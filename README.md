@@ -149,6 +149,8 @@ Transfers Step Trainer data from the "Landing" to the "Trusted" zone.
 
 <img src='./screenshots/job_results_athena/customer_trusted.png' style='width: 75%; display: block; margin: auto'> <br/>
 
+The resulting customer_trusted data has no rows where shareWithResearchAsOfDate is blank. 
+<img src='./screenshots/job_results_athena/customer_trusted_no_rows_where_ shareWithResearchAsOfDate_blank.png' style='width: 75%; display: block; margin: auto'> <br/>
 
 ### 7.3 **Accelerometer Trusted Data**
 - `SELECT * FROM accelerometer_trusted;`
